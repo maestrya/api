@@ -8,7 +8,8 @@
     "start": "node server.js",
     "test": "node ace test",
     "lint": "eslint app/",
-    "lint:fix": "eslint --fix app/"
+    "lint:fix": "eslint --fix app/",
+    "db": "adonis migration:rollback && adonis migration:run && adonis seed"
   },
   "keywords": [
     "adonisjs",
