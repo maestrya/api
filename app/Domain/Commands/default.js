@@ -7,5 +7,10 @@ class DefaultCommand {
         const validation = await validate(request, rules);
         return (validation.fails()) ? validation.messages() : null;
     }
+
+    responseJSON({ response, result }) {
+        const { body, code } = result;
+        return response.status(code).json(body);
+    }
 }
-module.exports = DefaultCommand
+module.exports = { DefaultCommand }

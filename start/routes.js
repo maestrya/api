@@ -17,5 +17,11 @@
 const Route = use('Route')
 
 Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+  return { project: 'Simios' }
 })
+
+const dir = 'App/Domain/Commands/';
+
+Route.group(() => {
+  Route.get('/', `${dir}Simios/get.execute`)
+}).prefix('api/simios')
