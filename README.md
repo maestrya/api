@@ -1,28 +1,49 @@
-# Adonis API application
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+# Simios API
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+  
+Only another project for academic purposes with AdonisJS and [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
 
-## Setup
+Required:
+ 
 
-Use the adonis command to install the blueprint
+ - [ Adonis.JS](https://adonisjs.com/docs/4.1/installation) 
+ - [Node.JS](https://nodejs.org/en/download/)
+
+Optional:
+
+ - [Docker](https://docs.docker.com/get-docker/)
+
+## Setup without docker
+
+Install project
+```bash
+npm install
+```
+If you have problem with PERMISSIONS
 
 ```bash
-adonis new yardstick --api-only
+npm install --unsafe-perm
+```
+## Run without docker
+
+```bash
+adonis serve
+```
+## Setup & Run with docker
+
+Run docker-compose in background (-d)
+```bash
+docker-compose up -d
 ```
 
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
+## Migrations && Seeds
 
 Run the following command to run startup migrations.
 
-```js
-adonis migration:run
+```bash
+npm run db
 ```
+
+
+
