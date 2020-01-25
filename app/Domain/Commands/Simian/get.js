@@ -3,7 +3,7 @@
 const { DefaultCommand } = use('App/Domain/Commands/default')
 const { Enums: { apiResponse } } = use('App/Helpers/enums')
 
-class SimiosGetCommand extends DefaultCommand {
+class SimianGetCommand extends DefaultCommand {
 
     async execute({ response }) {
         let result = {
@@ -15,7 +15,7 @@ class SimiosGetCommand extends DefaultCommand {
             result.body = { "count_mutant_dna": 40, "count_human_dna": 100, "ratio": 0.4 }
             result.code = apiResponse.codes.success;
         } catch (error) {
-            result.body = { message: apiResponse.errors.simios.getUnprocessed }
+            result.body = { message: apiResponse.errors.simian.getUnprocessed }
             result.code = apiResponse.codes.unprocessed;
         } finally {
             return this.responseJSON({ result, response })
@@ -23,4 +23,4 @@ class SimiosGetCommand extends DefaultCommand {
     }
 }
 
-module.exports = SimiosGetCommand
+module.exports = SimianGetCommand

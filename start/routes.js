@@ -17,11 +17,11 @@
 const Route = use('Route')
 
 Route.get('/', () => {
-  return { project: 'Simios' }
+  return { project: 'Simian' }
 })
 
-const dir = 'App/Domain/Commands/';
+const dir = 'App/Domain/Commands';
 
 Route.group(() => {
-  Route.get('/', `${dir}Simios/get.execute`)
-}).prefix('api/simios')
+  Route.get('/', `${dir}/Simian/get.execute`)
+}).prefix('api/simian')

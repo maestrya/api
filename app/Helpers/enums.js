@@ -7,7 +7,7 @@ const Enums = {
             unprocessed: 422
         },
         errors : {
-            simios: {
+            simian: {
                 getUnprocessed: 'UNPROCESSED'
             }
         }
