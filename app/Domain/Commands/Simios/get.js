@@ -15,8 +15,7 @@ class SimiosGetCommand extends DefaultCommand {
             result.body = { "count_mutant_dna": 40, "count_human_dna": 100, "ratio": 0.4 }
             result.code = apiResponse.codes.success;
         } catch (error) {
-            const { message } = apiResponse.errors.simios.getUnprocessed;
-            result.body = { message }
+            result.body = { message: apiResponse.errors.simios.getUnprocessed }
             result.code = apiResponse.codes.unprocessed;
         } finally {
             return this.responseJSON({ result, response })
