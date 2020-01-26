@@ -1,6 +1,8 @@
 
 'use strict'
 
+const lodash = use('lodash');
+
 class DnaItensEntity {
     constructor() {
         this.limit = 4;
@@ -19,9 +21,10 @@ class DnaItensEntity {
             const value = dnas[dna];
             const arrayValues = value.split('');
             arrayValues.some(elem => {
-                if (simianScore.hasOwnProperty(elem)) {
-                    const actualCount = simianScore[elem];
-                    simianScore[elem] = (actualCount < this.limit) ? (actualCount + 1) : actualCount;
+                const itemUpperCase = elem.toUpperCase();;
+                if (simianScore.hasOwnProperty(itemUpperCase)) {
+                    const actualCount = simianScore[itemUpperCase];
+                    simianScore[itemUpperCase] = (actualCount < this.limit) ? (actualCount + 1) : actualCount;
                     is_simian = true;
                 }
             });
@@ -40,6 +43,20 @@ class DnaItensEntity {
             newItens.push(actual)
         }
         return newItens;
+    }
+
+    compare($data, $input) {
+        let haveDifference = []
+        const teste = lodash.groupBy($data, 'dna_id');
+        const newteste = Object.keys(teste).map(item => {
+            const sjkjlksd = teste[item].map(i => i.value);
+
+            const assaakls = lodash.differenceWith($input, sjkjlksd, lodash.isEqual);
+            if (!assaakls.length) {
+                haveDifference.push(assaakls);
+            }
+        })
+        return haveDifference;
     }
 }
 

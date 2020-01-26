@@ -7,6 +7,10 @@ class DnasItensRepository extends DefaultRepository {
     async create(params) {
         return await DnasItensModel.createMany(params);
     }
+
+    async whereInValue(ids = []) {
+        return await this.database().select('dna_id', 'value').from('dnas_itens').whereIn('value', ids);
+    }
 }
 
 module.exports = { DnasItensRepository }

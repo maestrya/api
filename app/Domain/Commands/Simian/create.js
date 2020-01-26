@@ -25,26 +25,38 @@ class SimianCreateCommand extends DefaultCommand {
         if (validation != null)
             return this.responseJSON({ result: { body: validation, code: apiResponse.codes.unprocessed }, response })
 
-        const dnaItensEntity = new DnaItensEntity();
-        const { isSimian, resultIsSimian } = dnaItensEntity.verifyIsSimian(inputs.dna);
+        try {
+            const dnaItensEntity = new DnaItensEntity();
+            const { isSimian, resultIsSimian } = dnaItensEntity.verifyIsSimian(inputs.dna);
 
-        const dnaData = await new DnasRepository().create({ is_simian: isSimian });
+            if (!isSimian)
+                return this.responseJSON({ result: { body: { message: apiResponse.errors.simian.forbidden }, code: apiResponse.codes.forbidden }, response })
 
-        const dnaItensDataInsert = dnaItensEntity.handleCreate(dnaData.id, resultIsSimian);
-        
-        const dnaItensData = await new DnasItensRepository().create(dnaItensDataInsert);
+            const dnasItensRepository = new DnasItensRepository();
+            const haveDna = await dnasItensRepository.whereInValue(inputs.dna);
 
+            const compareExists = dnaItensEntity.compare(haveDna, inputs.dna);
 
-        // return {};
-        // try {
-        //     result.body = { "count_mutant_dna": 40, "count_human_dna": 100, "ratio": 0.4 }
-        //     result.code = apiResponse.codes.success;
-        // } catch (error) {
-        //     result.body = { message: apiResponse.errors.simian.getUnprocessed }
-        //     result.code = apiResponse.codes.unprocessed;
-        // } finally {
-        //     return this.responseJSON({ result, response })
-        // }
+            if (compareExists.length)
+                return this.responseJSON({ result: { body: { message: apiResponse.errors.simian.hasDNA }, code: apiResponse.codes.badRequest }, response })
+
+            const dnaData = await new DnasRepository().create({ is_simian: isSimian });
+
+            const dnaItensDataInsert = dnaItensEntity.handleCreate(dnaData.id, resultIsSimian);
+
+            await new DnasItensRepository().create(dnaItensDataInsert);
+
+            result.body = { data: dnaItensDataInsert }
+            result.code = apiResponse.codes.success;
+
+        } catch (error) {
+            result.body = { message: apiResponse.errors.simian.getUnprocessed }
+            result.code = apiResponse.codes.unprocessed;
+
+        }
+
+        return this.responseJSON({ result, response })
+
     }
 }
 
