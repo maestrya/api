@@ -47,13 +47,13 @@ class DnaItensEntity {
 
     compare($data, $input) {
         let haveDifference = []
-        const teste = lodash.groupBy($data, 'dna_id');
-        const newteste = Object.keys(teste).map(item => {
-            const sjkjlksd = teste[item].map(i => i.value);
+        const group = lodash.groupBy($data, 'dna_id');
+        Object.keys(group).map(item => {
+            const dbData = group[item].map(i => i.value);
 
-            const assaakls = lodash.differenceWith($input, sjkjlksd, lodash.isEqual);
+            const result = lodash.differenceWith($input, dbData, lodash.isEqual);
             if (!assaakls.length) {
-                haveDifference.push(assaakls);
+                haveDifference.push(result);
             }
         })
         return haveDifference;

@@ -5,7 +5,6 @@ const { DnaItensEntity } = use('App/Infrastructure/Entities/DnaItensEntity')
 const { Enums: { apiResponse } } = use('App/Helpers/enums')
 const { DnasRepository } = use('App/Infrastructure/Repositories/DnasRepository')
 const { DnasItensRepository } = use('App/Infrastructure/Repositories/DnasItensRepository')
-//const DnasItensModel = use('App/Models/DnasItens')
 
 class SimianCreateCommand extends DefaultCommand {
 
