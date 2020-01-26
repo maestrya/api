@@ -6,10 +6,7 @@ const { Enums: { apiResponse } } = use('App/Helpers/enums')
 class SimianGetCommand extends DefaultCommand {
 
     async execute({ response }) {
-        let result = {
-            body: null,
-            code: apiResponse.codes.badRequest
-        }
+        let result = this.resultDefault();
 
         try {
             result.body = { "count_mutant_dna": 40, "count_human_dna": 100, "ratio": 0.4 }
