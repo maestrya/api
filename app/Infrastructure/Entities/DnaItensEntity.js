@@ -52,7 +52,7 @@ class DnaItensEntity {
             const dbData = group[item].map(i => i.value);
 
             const result = lodash.differenceWith($input, dbData, lodash.isEqual);
-            if (!assaakls.length) {
+            if (!result.length) {
                 haveDifference.push(result);
             }
         })
