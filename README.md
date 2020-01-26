@@ -45,5 +45,6 @@ Run the following command to run startup migrations.
 npm run db
 ```
 
-
+## ER Model
+![image info](./simian.png)
 
