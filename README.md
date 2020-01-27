@@ -8,7 +8,9 @@
 Only another project for academic purposes with AdonisJS and [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
 
   
- 
+  Trello:
+- [Trello URL](https://trello.com/b/WBKul8qe/simios)
+
  Project in Heroku:
 - [Heroku URL](https://damp-falls-68282.herokuapp.com/)
 
