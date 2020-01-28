@@ -14,9 +14,10 @@ class SimianGetCommand extends DefaultCommand {
         } catch (error) {
             result.body = { message: apiResponse.errors.simian.getUnprocessed }
             result.code = apiResponse.codes.unprocessed;
-        } finally {
-            return this.responseJSON({ result, response })
         }
+
+        return this.responseJSON({ result, response })
+
     }
 }
 
