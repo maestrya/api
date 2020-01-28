@@ -29,6 +29,25 @@ Optional:
 
 The file **Simians.postman_collection.json** is Postman collection with base url in Heroku
 
+## Architecture
+
+ - **App**
+	 - **Domain =** Responsible for delegate responsibilities for business rules
+		 - **Command =**  Responsible for centralizing resources as Validations, Repositories and Entities
+	 - **Helpers =** Responsible for centralizing resources to help other layers
+	 - **Infrastructure =** Responsible for centralizing infrastructure related
+		 - **Entities =** Responsible for handle entities
+		 - **Models =** Responsible for connection and ORM with database
+		 - **Repositories =** Responsible for queries with database (extends Models)
+- **Database**
+  	- **Migrations =** Responsible for the database structure
+ 	- **Seeds =** Responsible for the default data in database
+- **Start**
+  	- **App =** Responsible with providers in application
+ 	- **Kernel =** Responsible with middlewares in application
+	- **Routes =** Responsible with HTTP routes (relationship with Commands)
+
+
 ## Install Adonis.JS
 
   
@@ -106,3 +125,4 @@ npm run db
 ## ER Model
 
 ![image info](./simian.png)
+
