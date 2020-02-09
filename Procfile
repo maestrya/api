@@ -1,2 +1,2 @@
-release: ENV_SILENT=true npm run migrations
+release: ./scripts/heroku.sh
 web: ENV_SILENT=true npm start
