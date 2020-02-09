@@ -8,10 +8,9 @@ const Enums = {
             unprocessed: 422
         },
         errors : {
-            simian: {
+            pages: {
                 forbidden: 'FORBIDDEN',
                 getUnprocessed: 'UNPROCESSED',
-                hasDNA: 'DNA_EXISTS'
             }
         }
     }

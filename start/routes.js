@@ -1,15 +1,15 @@
-'use strict'
+'use strict';
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use('Route');
 
 Route.get('/', () => {
-  return { project: 'Simian' }
-})
+  return { author: 'velrino', project: 'AutoFront' };
+});
 
 const dir = 'App/Domain/Commands';
 
 Route.group(() => {
-  Route.get('/stats', `${dir}/Simian/get.execute`)
-  Route.post('/simian', `${dir}/Simian/create.execute`)
-}).prefix('api')
+  Route.get('/', `${dir}/Pages/get.execute`);
+  Route.post('/', `${dir}/Pages/create.execute`);
+}).prefix('api/pages');
