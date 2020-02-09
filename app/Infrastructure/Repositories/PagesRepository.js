@@ -21,7 +21,7 @@ class PagesRepository extends DefaultRepository {
   }
 
   async paginate (page = 1, count = 10) {
-    return await PagesModel.query().paginate(page, count);
+    return await PagesModel.query().select('id', 'name').paginate(page, count);
   }
 }
 
