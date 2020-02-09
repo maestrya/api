@@ -29,7 +29,7 @@ class PagesMutateCommand extends DefaultCommand {
     }
 
     let dataResult = {};
-    //try {
+    try {
       const pagesRepository = new PagesRepository();
       const pageExists = await pagesRepository.whereName(inputs.name);
 
@@ -42,10 +42,10 @@ class PagesMutateCommand extends DefaultCommand {
 
       result.body = dataResult;
       result.code = apiResponse.codes.success;
-    // } catch (error) {
-    //   result.body = { message: apiResponse.errors.pages.getUnprocessed };
-    //   result.code = apiResponse.codes.unprocessed;
-    // }
+    } catch (error) {
+      result.body = { message: apiResponse.errors.pages.getUnprocessed };
+      result.code = apiResponse.codes.unprocessed;
+    }
 
     return this.responseJSON({ result, response });
   }
