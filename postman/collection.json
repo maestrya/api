@@ -1,0 +1,118 @@
+{
+	"id": "f91315fd-e56a-cc9f-9e5f-4a1b599e6cc8",
+	"name": "AutoFront",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "pages",
+			"description": "",
+			"collectionId": "f91315fd-e56a-cc9f-9e5f-4a1b599e6cc8",
+			"order": [
+				"bf3711a0-a3e0-a081-d752-627d2042d68f",
+				"f82d74d2-702e-e276-9b26-bc23eb93c704",
+				"20caaf04-1013-7d4e-6dac-5e3a791b3d40"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "6a77cfc5-630a-721a-9dd2-ba3a7b05eee1"
+		}
+	],
+	"folders_order": [
+		"6a77cfc5-630a-721a-9dd2-ba3a7b05eee1"
+	],
+	"timestamp": 1581255674351,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "20caaf04-1013-7d4e-6dac-5e3a791b3d40",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}api/pages/page_test",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1581256638863,
+			"name": "get one by name",
+			"description": "",
+			"collectionId": "f91315fd-e56a-cc9f-9e5f-4a1b599e6cc8",
+			"responses": [],
+			"rawModeData": "\n{\n\t\"name\" : \"page_test\",\n   \"data\":{\n      \"header\":{\n         \"title\":{\n            \"accessibility\":\"value\",\n            \"text\":\"value\"\n         }\n      },\n      \"body\":{\n         \"type\":\"static\",\n         \"render\":[\n            {\n               \"type\":\"text\",\n               \"accessibility\":\"value\",\n               \"value\":{\n                  \"header\":\"Lorem Ipsum\",\n                  \"text\":\"Lorem Ipsum\"\n               }\n            },\n            {\n               \"type\":\"input\",\n               \"value\":{\n                  \"name\":\"page_test_input_cpf\",\n                  \"value\":\"value_cpf\",\n                  \"mask\":\"cpf\",\n                  \"type\":\"text\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_cpf.change\"\n                  }\n               }\n            },\n            {\n               \"type\":\"input\",\n               \"value\":{\n                  \"name\":\"page_test_input_pass\",\n                  \"value\":\"value_password\",\n                  \"mask\":null,\n                  \"type\":\"password\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_pass.change\"\n                  }\n               }\n            },\n            {\n               \"type\":\"select\",\n               \"value\":{\n                  \"name\":\"page_test_input_select\",\n                  \"value\":3,\n                  \"mask\":null,\n                  \"type\":\"select\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_select.change\"\n                  },\n                  \"options\":[\n                     {\n                        \"id\":1,\n                        \"text\":\"Lorem Ipsum\"\n                     },\n                     {\n                        \"id\":2,\n                        \"text\":\"Ipsum lorem\"\n                     },\n                     {\n                        \"id\":3,\n                        \"text\":\"Birl\"\n                     }\n                  ]\n               }\n            }\n         ]\n      },\n      \"footer\":{\n         \"buttons\":{\n            \"type\":\"side\",\n            \"render\":[\n               {\n                  \"name\":\"page_test_submit\",\n                  \"accessibility\":\"Continuar\",\n                  \"color\":\"blue\",\n                  \"body\":{\n                     \"cpf\":null,\n                     \"password\":null\n                  },\n                  \"disabled\":true,\n                  \"text\":\"Continuar\",\n                  \"events\":{\n                     \"click\":\"page_test.page_test_submit.click\"\n                  }\n               }\n            ]\n         }\n      }\n   }\n}"
+		},
+		{
+			"id": "bf3711a0-a3e0-a081-d752-627d2042d68f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}api/pages",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1581256759980,
+			"name": "mutate",
+			"description": "",
+			"collectionId": "f91315fd-e56a-cc9f-9e5f-4a1b599e6cc8",
+			"responses": [],
+			"rawModeData": "\n{\n\t\"name\" : \"page_test\",\n   \"data\":{\n      \"header\":{\n         \"title\":{\n            \"accessibility\":\"value\",\n            \"text\":\"value\"\n         }\n      },\n      \"body\":{\n         \"type\":\"static\",\n         \"render\":[\n            {\n               \"type\":\"text\",\n               \"accessibility\":\"value\",\n               \"value\":{\n                  \"header\":\"Lorem Ipsum\",\n                  \"text\":\"Lorem Ipsum\"\n               }\n            },\n            {\n               \"type\":\"input\",\n               \"value\":{\n                  \"name\":\"page_test_input_cpf\",\n                  \"value\":\"value_cpf\",\n                  \"mask\":\"cpf\",\n                  \"type\":\"text\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_cpf.change\"\n                  }\n               }\n            },\n            {\n               \"type\":\"input\",\n               \"value\":{\n                  \"name\":\"page_test_input_pass\",\n                  \"value\":\"value_password\",\n                  \"mask\":null,\n                  \"type\":\"password\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_pass.change\"\n                  }\n               }\n            },\n            {\n               \"type\":\"select\",\n               \"value\":{\n                  \"name\":\"page_test_input_select\",\n                  \"value\":3,\n                  \"mask\":null,\n                  \"type\":\"select\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_select.change\"\n                  },\n                  \"options\":[\n                     {\n                        \"id\":1,\n                        \"text\":\"Lorem Ipsum\"\n                     },\n                     {\n                        \"id\":2,\n                        \"text\":\"Ipsum lorem\"\n                     },\n                     {\n                        \"id\":3,\n                        \"text\":\"Birl\"\n                     }\n                  ]\n               }\n            }\n         ]\n      },\n      \"footer\":{\n         \"buttons\":{\n            \"type\":\"side\",\n            \"render\":[\n               {\n                  \"name\":\"page_test_submit\",\n                  \"accessibility\":\"Continuar\",\n                  \"color\":\"blue\",\n                  \"body\":{\n                     \"cpf\":null,\n                     \"password\":null\n                  },\n                  \"disabled\":true,\n                  \"text\":\"Continuar\",\n                  \"events\":{\n                     \"click\":\"page_test.page_test_submit.click\"\n                  }\n               }\n            ]\n         }\n      }\n   }\n}"
+		},
+		{
+			"id": "f82d74d2-702e-e276-9b26-bc23eb93c704",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{BASE_URL}}api/pages",
+			"folder": "6a77cfc5-630a-721a-9dd2-ba3a7b05eee1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1581256763620,
+			"name": "paginate",
+			"description": "",
+			"collectionId": "f91315fd-e56a-cc9f-9e5f-4a1b599e6cc8",
+			"responses": [],
+			"rawModeData": "\n{\n\t\"name\" : \"page_test\",\n   \"data\":{\n      \"header\":{\n         \"title\":{\n            \"accessibility\":\"value\",\n            \"text\":\"value\"\n         }\n      },\n      \"body\":{\n         \"type\":\"static\",\n         \"render\":[\n            {\n               \"type\":\"text\",\n               \"accessibility\":\"value\",\n               \"value\":{\n                  \"header\":\"Lorem Ipsum\",\n                  \"text\":\"Lorem Ipsum\"\n               }\n            },\n            {\n               \"type\":\"input\",\n               \"value\":{\n                  \"name\":\"page_test_input_cpf\",\n                  \"value\":\"value_cpf\",\n                  \"mask\":\"cpf\",\n                  \"type\":\"text\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_cpf.change\"\n                  }\n               }\n            },\n            {\n               \"type\":\"input\",\n               \"value\":{\n                  \"name\":\"page_test_input_pass\",\n                  \"value\":\"value_password\",\n                  \"mask\":null,\n                  \"type\":\"password\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_pass.change\"\n                  }\n               }\n            },\n            {\n               \"type\":\"select\",\n               \"value\":{\n                  \"name\":\"page_test_input_select\",\n                  \"value\":3,\n                  \"mask\":null,\n                  \"type\":\"select\",\n                  \"validation\":[\n                     \"required\"\n                  ],\n                  \"events\":{\n                     \"change\":\"page_test.page_test_input_select.change\"\n                  },\n                  \"options\":[\n                     {\n                        \"id\":1,\n                        \"text\":\"Lorem Ipsum\"\n                     },\n                     {\n                        \"id\":2,\n                        \"text\":\"Ipsum lorem\"\n                     },\n                     {\n                        \"id\":3,\n                        \"text\":\"Birl\"\n                     }\n                  ]\n               }\n            }\n         ]\n      },\n      \"footer\":{\n         \"buttons\":{\n            \"type\":\"side\",\n            \"render\":[\n               {\n                  \"name\":\"page_test_submit\",\n                  \"accessibility\":\"Continuar\",\n                  \"color\":\"blue\",\n                  \"body\":{\n                     \"cpf\":null,\n                     \"password\":null\n                  },\n                  \"disabled\":true,\n                  \"text\":\"Continuar\",\n                  \"events\":{\n                     \"click\":\"page_test.page_test_submit.click\"\n                  }\n               }\n            ]\n         }\n      }\n   }\n}"
+		}
+	]
+}

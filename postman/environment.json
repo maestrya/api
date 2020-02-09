@@ -1,0 +1,16 @@
+{
+  "id": "3150cdfd-24cd-9936-fb91-f14ddc3f4a20",
+  "name": "PARAMS",
+  "values": [
+    {
+      "enabled": true,
+      "key": "BASE_URL",
+      "value": "http://0.0.0.0:80/",
+      "type": "text"
+    }
+  ],
+  "timestamp": 1581256517224,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2020-02-09T13:58:07.216Z",
+  "_postman_exported_using": "Postman/5.5.4"
+}
