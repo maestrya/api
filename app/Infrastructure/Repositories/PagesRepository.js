@@ -11,6 +11,18 @@ class PagesRepository extends DefaultRepository {
   async first () {
     return await PagesModel.first();
   }
+
+  async whereName (name) {
+    return await PagesModel.query().where('name', name).first();
+  }
+
+  async updateById (id, data) {
+    return await PagesModel.query().where('id', id).update({ data });
+  }
+
+  async paginate (page = 1, count = 10) {
+    return await PagesModel.query().paginate(page, count);
+  }
 }
 
 module.exports = { PagesRepository };
