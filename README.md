@@ -1,15 +1,15 @@
 
   
 
-# Simios API
+# AutoFront API
 
   
 
-Only another project for academic purposes with AdonisJS and [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
+AutoFront is another project for academic purposes with AdonisJS and [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) , and  standardize the return structure
 
   
   Trello:
-- [Trello URL](https://trello.com/b/WBKul8qe/simios)
+- [Trello](https://trello.com/b/CoqpFbde/autofront)
 
  Project in Heroku:
 - [Heroku URL](https://damp-falls-68282.herokuapp.com/)
@@ -27,7 +27,9 @@ Optional:
 
 -  [Docker](https://docs.docker.com/get-docker/)
 
-The file **Simians.postman_collection.json** is Postman collection with base url in Heroku
+## Postamn
+
+The folder **Postman** contains postman collection and environment variables for tests 
 
 ## Architecture
 
@@ -120,9 +122,5 @@ npm run db
 
 ```
 
-  
-
-## ER Model
-
-![image info](./simian.png)
+ 
 
