@@ -10,7 +10,7 @@
     "lint": "eslint app/",
     "lint:fix": "eslint --fix app/",
     "migrations": "ENV_SILENT=true node ace migration:rollback --force && node ace migration:run --force",
-    "db": "npm run migrations && node ace seed"
+    "db": "npm run migrations && node ace seed --force"
   },
   "engines": {
     "node": "8.5.0"
