@@ -1,20 +1,7 @@
-mysql:
-  restart: always
-  image: mysql:5.7
-  container_name: 'adonis_mysql'
-  ports:
-    - "3306:3306"
-  volumes:
-    - database:/var/lib/mysql
-  environment:
-    MYSQL_DATABASE: adonis
-    MYSQL_ROOT_PASSWORD: simian 
 web:
   build: .
   container_name: 'adonis_web'
   ports:
-   - "7777:7777"
+   - "80:80"
   volumes:
    - .:/code
-  links:
-    - "mysql"
