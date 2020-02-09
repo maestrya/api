@@ -10,6 +10,7 @@ Route.get('/', () => {
 const dir = 'App/Domain/Commands';
 
 Route.group(() => {
-  Route.get('/', `${dir}/Pages/get.execute`);
-  Route.post('/', `${dir}/Pages/create.execute`);
+  Route.get('/', `${dir}/Pages/paginate.execute`);
+  Route.get('/:name', `${dir}/Pages/get.execute`);
+  Route.post('/', `${dir}/Pages/mutate.execute`);
 }).prefix('api/pages');
