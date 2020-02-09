@@ -43,7 +43,7 @@ class PagesMutateCommand extends DefaultCommand {
       result.body = dataResult;
       result.code = apiResponse.codes.success;
     } catch (error) {
-      result.body = { message: apiResponse.errors.simian.getUnprocessed };
+      result.body = { message: apiResponse.errors.pages.getUnprocessed };
       result.code = apiResponse.codes.unprocessed;
     }
 
