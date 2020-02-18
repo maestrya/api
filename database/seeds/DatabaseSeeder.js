@@ -21,6 +21,11 @@ class DatabaseSeeder {
         id: '3fbc4824-1f94-41e1-9c55-b20c407c394c',
         name: 'page_test',
         data: PagesData,
+      },
+      {
+        id: '8dcf3410-7dcc-4901-85da-3a013a914300',
+        name: 'bankera_home',
+        data: PagesData,
       }
     ]);
 
