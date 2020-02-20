@@ -1,11 +1,11 @@
 
   
 
-# AutoFront API
+# Maestrya API
 
   
 
-AutoFront is another project for academic purposes with AdonisJS and [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) , and  standardize the return structure
+Maestrya is another project for academic purposes with AdonisJS and [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) , and  standardize the return structure
 
   
   Trello:
